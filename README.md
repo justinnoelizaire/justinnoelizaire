@@ -1,4 +1,4 @@
-## Hi there, welcome to my app!!!👋
+## Hi there, welcome to my basketball app!!!👋
 
 <!--
 **justinnoelizaire/justinnoelizaire** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
