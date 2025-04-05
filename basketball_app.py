@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import random
 
 #page configuration
 st.set_page_config(page_title="Basketball Stats Explorer", page_icon="🏀")
@@ -12,9 +13,9 @@ st.markdown("Welcome to the Basketball Stats Explorer! Explore basic basketball 
 #sample player data
 player_data = {
     'Player': ['LeBron James', 'Stephen Curry', 'Kevin Durant', 'Giannis Antetokounmpo', 'Luka Doncic'],
-    'Points Per Game': [25.0, 28.5, 29.1, 30.2, 32.5],
-    'Assists Per Game': [7.8, 6.3, 5.5, 6.1, 8.0],
-    'Rebounds Per Game': [7.3, 4.5, 6.9, 11.2, 8.7],
+    'Points_Per_Game': [25.0, 28.5, 29.1, 30.2, 32.5],
+    'Assists_Per_Game': [7.8, 6.3, 5.5, 6.1, 8.0],
+    'Rebounds_Per_Game': [7.3, 4.5, 6.9, 11.2, 8.7],
     'Team': ['Lakers', 'Warriors', 'Suns', 'Bucks', 'Mavericks']
 }
 
@@ -24,7 +25,7 @@ df = pd.DataFrame(player_data)
 st.sidebar.header("Player Statistics")
 selected_stat = st.sidebar.selectbox(
     "Choose a statistic to visualize:",
-    ['Points Per Game', 'Assists Per Game', 'Rebounds Per Game']
+    ['Points_Per_Game', 'Assists_Per_Game', 'Rebounds_Per_Game']
 )
 
 # Main content
@@ -53,11 +54,11 @@ if selected_player:
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.metric("Points", f"{player_stats['Points Per Game']:.1f}")
+        st.metric("Points", f"{player_stats['Points_Per_Game']:.1f}")
     with col2:
-        st.metric("Assists", f"{player_stats['Assists Per Game']:.1f}")
+        st.metric("Assists", f"{player_stats['Assists_Per_Game']:.1f}")
     with col3:
-        st.metric("Rebounds", f"{player_stats['Rebounds Per Game']:.1f}")
+        st.metric("Rebounds", f"{player_stats['Rebounds_Per_Game']:.1f}")
 
 # Fun fact section
 st.sidebar.markdown("---")
@@ -69,4 +70,4 @@ basketball_facts = [
     "Kareem Abdul-Jabbar holds the record for most points in NBA history.",
     "The first basketball game was played with a soccer ball."
 ]
-st.sidebar.write(basketball_facts[0])
+st.sidebar.write(random.choice(basketball_facts))
