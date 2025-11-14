@@ -1,41 +1,37 @@
-## Hi there, welcome to my basketball app!!!👋
-
 # Basketball Analytics App
 
-# Setup Instructions
+## Setup Instructions
 
-Create a virtual environment
-
+1. Create a virtual environment
+```bash
 python3 -m venv venv
-
 source venv/bin/activate
+```
 
-Install dependencies
-
+2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-Set up database
-
+3. Set up database
+```bash
 # Adjust according to your database setup
-
 createdb basketball_db
+```
 
-Run the Flask backend
-
+4. Run the Flask backend
+```bash
 python -m backend.app
+```
 
-Run Streamlit analytics
-
+5. Run Streamlit analytics
+```bash
 streamlit run streamlit_app/analytics.py
+```
 
-# Features
-
-User Authentication
-
-Player Management
-
-Game Tracking
-
-Advanced Analytics Dashboard
-
-Responsive Frontend!--
+## Features
+- User Authentication
+- Player Management
+- Game Tracking
+- Advanced Analytics Dashboard
+- Responsive Frontend
